@@ -56,7 +56,10 @@ public class TransformFailureResponse implements
 		String inputString = ComputeUtils.getStringFromBlob(inMessage);
 
 		// Log the input blob
-		logger.error("inputString {} ", inputString);		
+		logger.error("inputString {} ", inputString);
+		
+		
+		//TODO timeout exception
 
 		// Return the error after mapping errorCode from cache/database
 		IFXCode errorCode = IFXCodeDomain.getInstance().getErrorCode("BL305657E");

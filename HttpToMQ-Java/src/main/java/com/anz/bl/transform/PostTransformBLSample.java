@@ -38,10 +38,7 @@ public class PostTransformBLSample implements ITransformer<String, String> {
 				NumbersInput.class);
 		logger.info("Inside Java Compute");
 		
-		
-		//METHOD TO RETRIEVE FROM CACHE
-		String value = CacheHandlerFactory.getInstance().lookupCache("MQHeaderCache", "MQMDMessageId");
-		
+		//Add left and right
 		json.setSum(json.getLeft() + json.getRight());
 		String out = TransformUtils.toJSON(json);
 		return out;

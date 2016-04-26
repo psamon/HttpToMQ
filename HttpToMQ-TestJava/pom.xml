@@ -5,13 +5,13 @@
 
 	<parent>
 		<groupId>com.anz.api</groupId>
-		<artifactId>MQToMQ-Parent</artifactId>
+		<artifactId>HttpToMQ-Parent</artifactId>
 		<version>0.0.0.1-SNAPSHOT</version>
 	</parent>
 
 
 	<groupId>com.anz</groupId>
-	<artifactId>MQToMQ-TestJava</artifactId>
+	<artifactId>HttpToMQ-TestJava</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 
@@ -28,7 +28,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.anz</groupId>
-			<artifactId>MQToMQ-Java</artifactId>
+			<artifactId>HttpToMQ-Java</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>

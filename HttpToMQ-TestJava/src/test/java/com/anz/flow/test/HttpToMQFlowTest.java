@@ -41,17 +41,17 @@ import com.ibm.broker.config.proxy.RecordedTestData;
  * @author sanketsw
  * 
  */
-public class MQToMQFlowTest extends FlowTest {
+public class HttpToMQFlowTest extends FlowTest {
 
 	private static final Logger logger = LogManager.getLogger();
 	
 	private Gson gson = new Gson();
 	ObjectMapper objectMapper = new ObjectMapper();
 
-	private static final String TEST_FILE_001 = "MQToMQ.Test001.xml";
-	private static final String applicationName = "MQToMQ";
+	private static final String TEST_FILE_001 = "HttpToMQ.Test001.xml";
+	private static final String applicationName = "HttpToMQ";
 	private static final String flowName = "Request";
-	private static final String injectNodeName ="Read Request";
+	private static final String injectNodeName ="HTTP Input";
 	
 	
 	private static final String MESSAGE_FORMAT = "MessageFormat.xml";
@@ -71,9 +71,9 @@ public class MQToMQFlowTest extends FlowTest {
 		
 		logger.info("injecting data...");
 		// load test data from file
-		String message = IOUtils.toString(MQToMQFlowTest.class.getResourceAsStream(TEST_FILE_001));
+		String message = IOUtils.toString(HttpToMQFlowTest.class.getResourceAsStream(TEST_FILE_001));
 		String jsonBlob = TransformUtils.getBlob(message);
-		String messageFormat = IOUtils.toString(MQToMQFlowTest.class.getResourceAsStream(MESSAGE_FORMAT));
+		String messageFormat = IOUtils.toString(HttpToMQFlowTest.class.getResourceAsStream(MESSAGE_FORMAT));
 		message = messageFormat.replace("MESSAGE_FORMAT", jsonBlob);
 		
 		Properties injectProps = new Properties();
@@ -93,22 +93,24 @@ public class MQToMQFlowTest extends FlowTest {
 	
 	@Test
 	public void testMainFlow() throws ConfigManagerProxyPropertyNotInitializedException, ConfigManagerProxyLoggedException, IOException, XPathExpressionException, SAXException, ParserConfigurationException, TransformerException, JSONException {
+		
+		//Inject test data into Input node
 		injectData();
+		
 		//User defined test method calls
-		//testMQInputNodeOutput();
-		testSimpleTransformNodeOutput();
+		testInput();
+		testPreTransformNodeOutput();
 		testPostTransformNodeOutput();
-		//testFinalResult();
+		testOutput();
 	}
 
 
-	
-	public void testMQInputNodeOutput() throws ConfigManagerProxyPropertyNotInitializedException, XPathExpressionException, SAXException, IOException, ParserConfigurationException, TransformerException, JSONException {
+	public void testInput() throws ConfigManagerProxyPropertyNotInitializedException, XPathExpressionException, SAXException, IOException, ParserConfigurationException, TransformerException, JSONException {
 		
 		Node n = null;
 		
 		// Mapping Node
-		List<RecordedTestData> dataList = getTestDataList("Read Request");
+		List<RecordedTestData> dataList = getTestDataList("HTTP Input");
 		
 		String json = getNodeOutputJsonStringFromBlob(dataList.get(0));
 		JsonNode root = objectMapper.readTree(json);
@@ -122,10 +124,10 @@ public class MQToMQFlowTest extends FlowTest {
 	}
 	
 	
-	public void testSimpleTransformNodeOutput() throws ConfigManagerProxyPropertyNotInitializedException, XPathExpressionException, SAXException, IOException, ParserConfigurationException {	
+	public void testPreTransformNodeOutput() throws ConfigManagerProxyPropertyNotInitializedException, XPathExpressionException, SAXException, IOException, ParserConfigurationException {	
 		
 		// PreTransform Node
-		List<RecordedTestData> dataList = getTestDataList("com.anz.bl.transform.PreTransformBLSample");
+		List<RecordedTestData> dataList = getTestDataList("Request Transform");
 		
 		String json = getNodeOutputJsonStringFromBlob(dataList.get(0));
 		NumbersInput out = gson.fromJson(json, NumbersInput.class);
@@ -139,38 +141,18 @@ public class MQToMQFlowTest extends FlowTest {
 	public void testPostTransformNodeOutput() throws ConfigManagerProxyPropertyNotInitializedException, XPathExpressionException, SAXException, IOException, ParserConfigurationException {	
 		
 		// PreTransform Node
-		List<RecordedTestData> dataList = getTestDataList("com.anz.bl.transform.PostTransformBLSample");
+		List<RecordedTestData> dataList = getTestDataList("Response Transform");
 		
 		String json = getNodeOutputJsonStringFromBlob(dataList.get(0));
 		NumbersInput out = gson.fromJson(json, NumbersInput.class);
 
 		assertNotNull(out);
-		assertEquals(12, out.getSum());
+		assertEquals(112, out.getSum());
 		
 		
 	}
 	
-
-
-	public void testHttpRequestNodeOutput() throws ConfigManagerProxyPropertyNotInitializedException, XPathExpressionException, SAXException, IOException, ParserConfigurationException {	
-
-		Node n = null;
-		
-		// HttpRequest Node
-		List<RecordedTestData> dataList = getTestDataList("HTTP Request");
-		
-		String json = getNodeOutputJsonStringFromBlob(dataList.get(0));
-		JsonNode root = objectMapper.readTree(json);
-		
-		String element = root.at("/imeplementation").asText(); // The element can be specified as /Data/Account/right
-		assertEquals("Java_SpringBoot", element);
-		
-		element = root.at("/result").asText();
-		assertEquals("109", element);	
-				
-	}
-	
-	public void testFinalResult() throws XPathExpressionException, SAXException, IOException, ParserConfigurationException, ConfigManagerProxyPropertyNotInitializedException {	
+	public void testOutput() throws XPathExpressionException, SAXException, IOException, ParserConfigurationException, ConfigManagerProxyPropertyNotInitializedException {	
 		
 		Node n = null;
 		

@@ -37,31 +37,18 @@ public class PreTransformBLSample implements ITransformer<String, String> {
 		logger.info("Inside PreTransform");
 		//throw new Exception("Error in request transform- user created");
 		
-/*		logger.info("json = {}", json);
-		
-		//Get Message ID
-		String header = "MsgId";
-		
-		int startId = inputJson.indexOf(header) + header.length() + 1;
-		int endId = inputJson.indexOf(header, startId) - 2;
-
-		String msgId = inputJson.substring(startId, endId);
-		
-		logger.info("msgId = {}", msgId);
+		//-----------------------------------------------------------------------------------------
+		// User Code Below
 		
 		
-		//METHOD TO STORE IN CACHE
-		CacheHandlerFactory.getInstance().updateCache("MqHeaderCache", "MqmdCorrelId", msgId);
-		
-		//METHOD TO RETRIEVE FROM CACHE
-		String correlId = CacheHandlerFactory.getInstance().lookupCache("MQHeaderCache", "MQMDCorrelId");
-		
-		logger.info("CorrelId = {}", correlId);*/
-		
+		//Example: Increase left by 100
 		json.setLeft(json.getLeft() + 100);
 		String out = TransformUtils.toJSON(json);
+		
+		
+		// End User Code
+		//-----------------------------------------------------------------------------------------
+		
 		return out;
 	}
-
-
 }

@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.anz.api</groupId>
-	<artifactId>MQToMQ-Parent</artifactId>
+	<artifactId>HttpToMQ-Parent</artifactId>
 	<version>0.0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
 	<properties>
-	<gitUrl>https://github.com/sanketsw/HttpJsonToHttpJson.git</gitUrl>
+	<gitUrl>https://github.com/psamon/HttpToMQ.git</gitUrl>
 	</properties>
 
 	<distributionManagement>
@@ -33,9 +33,9 @@
 
 
 	<modules>
-		<module>MQToMQ-Java</module>
-		<module>MQToMQ-TestJava</module>
-		<module>MQToMQ</module>
+		<module>HttpToMQ-Java</module>
+		<module>HttpToMQ-TestJava</module>
+		<module>HttpToMQ</module>
 	</modules>
 	<build>
 		<plugins>

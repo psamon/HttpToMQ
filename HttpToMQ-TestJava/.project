@@ -3,6 +3,7 @@
 	<name>HttpToMQ-TestJava</name>
 	<comment></comment>
 	<projects>
+		<project>anz-iib-commons</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
