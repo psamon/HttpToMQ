@@ -1,39 +1,5 @@
-<message xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="MQROOT"
+<message xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="WSRoot"
 	iib:injectable="true">
-	<Properties iib:parser="MQPROPERTYPARSER">
-		<MessageSet iib:valueType="CHARACTER" iib:elementType="0x03000000"></MessageSet>
-		<MessageType iib:valueType="CHARACTER" iib:elementType="0x03000000"></MessageType>
-		<MessageFormat iib:valueType="CHARACTER"
-			iib:elementType="0x03000000"></MessageFormat>
-		<Encoding iib:valueType="INTEGER">273</Encoding>
-		<CodedCharSetId iib:valueType="INTEGER">1208</CodedCharSetId>
-		<Transactional iib:valueType="BOOLEAN">TRUE</Transactional>
-		<Persistence iib:valueType="BOOLEAN">FALSE</Persistence>
-		<CreationTime iib:valueType="GMTTIMESTAMP">2016-04-20 05:04:18.110</CreationTime>
-		<ExpirationTime iib:valueType="INTEGER">-1</ExpirationTime>
-		<Priority iib:valueType="INTEGER">0</Priority>
-		<ReplyIdentifier iib:valueType="BLOB">000000000000000000000000000000000000000000000000</ReplyIdentifier>
-		<ReplyProtocol iib:valueType="CHARACTER">MQ</ReplyProtocol>
-		<Topic iib:elementType="0x03000000" />
-		<ContentType iib:valueType="CHARACTER" iib:elementType="0x03000000"></ContentType>
-		<IdentitySourceType iib:valueType="CHARACTER"
-			iib:elementType="0x03000000"></IdentitySourceType>
-		<IdentitySourceToken iib:valueType="CHARACTER"
-			iib:elementType="0x03000000"></IdentitySourceToken>
-		<IdentitySourcePassword iib:valueType="CHARACTER"
-			iib:elementType="0x03000000"></IdentitySourcePassword>
-		<IdentitySourceIssuedBy iib:valueType="CHARACTER"
-			iib:elementType="0x03000000"></IdentitySourceIssuedBy>
-		<IdentityMappedType iib:valueType="CHARACTER"
-			iib:elementType="0x03000000"></IdentityMappedType>
-		<IdentityMappedToken iib:valueType="CHARACTER"
-			iib:elementType="0x03000000"></IdentityMappedToken>
-		<IdentityMappedPassword iib:valueType="CHARACTER"
-			iib:elementType="0x03000000"></IdentityMappedPassword>
-		<IdentityMappedIssuedBy iib:valueType="CHARACTER"
-			iib:elementType="0x03000000"></IdentityMappedIssuedBy>
-	</Properties>
-	
 	<BLOB iib:parser="none">
 		<UnknownParserName iib:valueType="CHARACTER"
 			iib:elementType="0x03000000"></UnknownParserName>
