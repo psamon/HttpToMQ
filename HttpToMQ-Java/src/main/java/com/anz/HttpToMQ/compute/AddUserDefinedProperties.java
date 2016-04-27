@@ -2,14 +2,15 @@
 /**
  * 
  */
-package com.anz.bl.compute;
+package com.anz.HttpToMQ.compute;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.anz.bl.transform.PreTransformBLSample;
+import com.anz.HttpToMQ.transform.PreTransformBLSample;
 
 
+import com.anz.common.compute.TransformType;
 import com.anz.common.compute.impl.CommonJavaCompute;
 import com.anz.common.transform.ITransformer;
 import com.ibm.broker.plugin.MbElement;
@@ -43,5 +44,11 @@ public class AddUserDefinedProperties extends CommonJavaCompute {
 				.createElementAsFirstChild(MbElement.TYPE_NAME_VALUE, "DestinationData", "")
 				.createElementAsFirstChild(MbElement.TYPE_NAME_VALUE, "queueName", getUserDefinedAttribute("providerQueue"));
 		logger.info("{} = {}", providerQ.getName(), providerQ.getValueAsString());	
+	}
+
+	@Override
+	public TransformType getTransformationType() {
+		// TODO Auto-generated method stub
+		return TransformType.HTTP_MQ;
 	}
 }

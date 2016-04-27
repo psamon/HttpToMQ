@@ -1,14 +1,15 @@
 /**
  * 
  */
-package com.anz.bl.compute;
+package com.anz.HttpToMQ.compute;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.anz.bl.transform.PreTransformBLSample;
+import com.anz.HttpToMQ.transform.PreTransformBLSample;
 
 import com.anz.common.cache.impl.CacheHandlerFactory;
+import com.anz.common.compute.TransformType;
 import com.anz.common.compute.impl.CommonJavaCompute;
 import com.anz.common.transform.ITransformer;
 import com.ibm.broker.plugin.MbElement;
@@ -52,6 +53,12 @@ public class RetrieveOriginalHeader extends CommonJavaCompute {
 		
 		
 		
+	}
+
+	@Override
+	public TransformType getTransformationType() {
+		// TODO Auto-generated method stub
+		return TransformType.HTTP_MQ;
 	}
 
 }

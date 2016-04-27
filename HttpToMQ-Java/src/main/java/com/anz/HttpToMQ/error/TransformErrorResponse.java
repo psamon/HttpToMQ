@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.anz.error;
+package com.anz.HttpToMQ.error;
 
 import org.apache.logging.log4j.Logger;
 

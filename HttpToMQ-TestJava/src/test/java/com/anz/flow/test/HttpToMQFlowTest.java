@@ -23,8 +23,8 @@ import org.junit.Test;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
-import com.anz.bl.transform.pojo.NumbersInput;
-import com.anz.bl.transform.pojo.Result;
+import com.anz.HttpToMQ.transform.pojo.NumbersInput;
+import com.anz.HttpToMQ.transform.pojo.Result;
 import com.anz.common.dataaccess.models.iib.Operation;
 import com.anz.common.test.FlowTest;
 import com.anz.common.transform.TransformUtils;
@@ -98,31 +98,10 @@ public class HttpToMQFlowTest extends FlowTest {
 		injectData();
 		
 		//User defined test method calls
-		testInput();
 		testPreTransformNodeOutput();
 		testPostTransformNodeOutput();
-		testOutput();
-	}
 
-
-	public void testInput() throws ConfigManagerProxyPropertyNotInitializedException, XPathExpressionException, SAXException, IOException, ParserConfigurationException, TransformerException, JSONException {
-		
-		Node n = null;
-		
-		// Mapping Node
-		List<RecordedTestData> dataList = getTestDataList("HTTP Input");
-		
-		String json = getNodeOutputJsonStringFromBlob(dataList.get(0));
-		JsonNode root = objectMapper.readTree(json);
-		
-		String element = root.at("/left").asText(); // The element can be specified as /Data/Account/right
-		assertEquals("5", element);
-		
-		element = root.at("/right").asText();
-		assertEquals("7", element);
-		
 	}
-	
 	
 	public void testPreTransformNodeOutput() throws ConfigManagerProxyPropertyNotInitializedException, XPathExpressionException, SAXException, IOException, ParserConfigurationException {	
 		
@@ -147,27 +126,8 @@ public class HttpToMQFlowTest extends FlowTest {
 		NumbersInput out = gson.fromJson(json, NumbersInput.class);
 
 		assertNotNull(out);
-		assertEquals(112, out.getSum());
-		
-		
-	}
-	
-	public void testOutput() throws XPathExpressionException, SAXException, IOException, ParserConfigurationException, ConfigManagerProxyPropertyNotInitializedException {	
-		
-		Node n = null;
-		
-		// PostTransform node
-		List<RecordedTestData> dataList = getTestDataList("com.anz.bl.transform.TransformBLSampleWithCache");
-		
-		String json = getNodeOutputJsonStringFromBlob(dataList.get(0));
-		Result out = gson.fromJson(json, Result.class);
-		
-		assertEquals("IIB REST API implementation", out.getImeplementation());
-		assertEquals(Operation.ADD, out.getOperation());
-		assertEquals("109", out.getResult());
+		assertEquals(105, out.getLeft());
+		assertEquals(107, out.getRight());
 		
 	}
-
-
-
 }
