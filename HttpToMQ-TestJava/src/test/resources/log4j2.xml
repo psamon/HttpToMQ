@@ -9,11 +9,11 @@
       <AppenderRef ref="MyFile"/>
      </Async>
      
-     <File name="HttpJsonToHttpJsonFile" fileName="/root/logs/HttpJsonToHttpJson.log">
+     <File name="MQToMQFile" fileName="/root/logs/MQToMQ.log">
       <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
      </File>
-     <Async name="HttpJsonToHttpJsonAsync">
-      <AppenderRef ref="HttpJsonToHttpJsonFile"/>
+     <Async name="MQToMQAsync">
+      <AppenderRef ref="MQToMQFile"/>
      </Async>
 
     </Appenders>
@@ -30,8 +30,8 @@
       <AppenderRef ref="Async"/>
      </logger>
 
-     <logger name="com.anz.HttpJsonToHttpJson" level="info" additivity="false">
-      <AppenderRef ref="HttpJsonToHttpJsonAsync"/>
+     <logger name="com.anz.MQToMQ" level="info" additivity="false">
+      <AppenderRef ref="MQToMQAsync"/>
      </logger>
 
   </Loggers>

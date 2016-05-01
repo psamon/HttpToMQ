@@ -3,13 +3,13 @@
     xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="Main.msgflow" nsPrefix="Main.msgflow">
   <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1">
     <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
-    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.APP_NAME" name="APP_NAME" lowerBound="1" defaultValueLiteral="MQToMQ">
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.APP_NAME" name="APP_NAME" lowerBound="1" defaultValueLiteral="HttpToMQ">
       <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
-    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.JAVA_PROJECT" name="JAVA_PROJECT" lowerBound="1" defaultValueLiteral="MQToMQ-Java">
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.JAVA_PROJECT" name="JAVA_PROJECT" lowerBound="1" defaultValueLiteral="HttpToMQ-Java">
       <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
-    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.TEST_PROJECT" name="TEST_PROJECT" lowerBound="1" defaultValueLiteral="MQToMQ-TestJava">
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.TEST_PROJECT" name="TEST_PROJECT" lowerBound="1" defaultValueLiteral="HttpToMQ-TestJava">
       <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
     <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.providerQueue" name="providerQueue" lowerBound="1" defaultValueLiteral="PROVIDER">

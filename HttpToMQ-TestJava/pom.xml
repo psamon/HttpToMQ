@@ -32,12 +32,12 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>com.anz</groupId>
+			<groupId>com.anz.api</groupId>
 			<artifactId>HttpToMQ-Java</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
