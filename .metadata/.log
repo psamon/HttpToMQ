@@ -1,0 +1,41 @@
+!SESSION 2016-05-01 20:31:19.482 -----------------------------------------------
+eclipse.buildId=4.2.2.M20140918-1444
+java.fullversion=JRE 1.7.0 IBM J9 2.7 Linux amd64-64 Compressed References 20151222_283006 (JIT enabled, AOT enabled)
+J9VM - R27_Java727_SR3_20151222_1037_B283006
+JIT  - tr.r13.java.sr3.fp30_20151209_107107.01
+GC   - R27_Java727_SR3_20151222_1037_B283006_CMPRSS
+J9CL - 20151222_283006
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -noupdate -application com.ibm.etools.mft.bar.cmdline.mqsicreatebar -b HttpToMQ-App-0.0.0.1-SNAPSHOT.bar -a HttpToMQ-App -trace -wmbtData
+Command-line arguments:  -noupdate -os linux -ws gtk -application com.ibm.etools.mft.bar.cmdline.mqsicreatebar -data /root/git/HttpToMQ-Parent -b HttpToMQ-App-0.0.0.1-SNAPSHOT.bar -a HttpToMQ-App -trace -wmbtData
+
+!ENTRY org.eclipse.emf.ecore 2 0 2016-05-01 20:31:22.690
+!MESSAGE Both 'com.ibm.etools.javaee.core' and 'com.ibm.etools.mft.service.model' register an extension parser for 'application'
+
+!ENTRY org.eclipse.osgi 2 1 2016-05-01 20:31:38.216
+!MESSAGE NLS unused message: DFDLXSDResourceBuilder_errorSchemaInAppImportSchemaInSharedLib in: com.ibm.etools.msg.builder.messages
+
+!ENTRY org.eclipse.osgi 2 1 2016-05-01 20:31:38.216
+!MESSAGE NLS unused message: DFDLXSDResourceBuilder_errorProjectReferenceIsMissing in: com.ibm.etools.msg.builder.messages
+!SESSION 2016-05-01 20:32:16.901 -----------------------------------------------
+eclipse.buildId=4.2.2.M20140918-1444
+java.fullversion=JRE 1.7.0 IBM J9 2.7 Linux amd64-64 Compressed References 20151222_283006 (JIT enabled, AOT enabled)
+J9VM - R27_Java727_SR3_20151222_1037_B283006
+JIT  - tr.r13.java.sr3.fp30_20151209_107107.01
+GC   - R27_Java727_SR3_20151222_1037_B283006_CMPRSS
+J9CL - 20151222_283006
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -noupdate -application com.ibm.etools.mft.bar.cmdline.mqsicreatebar -b HttpToMQ-App-0.0.0.1-SNAPSHOT.bar -a HttpToMQ-App -trace -wmbtData
+Command-line arguments:  -noupdate -os linux -ws gtk -application com.ibm.etools.mft.bar.cmdline.mqsicreatebar -data /root/git/HttpToMQ-Parent -b HttpToMQ-App-0.0.0.1-SNAPSHOT.bar -a HttpToMQ-App -trace -wmbtData
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-05-01 20:32:18.705
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2016-05-01 20:32:19.034
+!MESSAGE Both 'com.ibm.etools.javaee.core' and 'com.ibm.etools.mft.service.model' register an extension parser for 'application'
+
+!ENTRY org.eclipse.osgi 2 1 2016-05-01 20:32:23.567
+!MESSAGE NLS unused message: DFDLXSDResourceBuilder_errorSchemaInAppImportSchemaInSharedLib in: com.ibm.etools.msg.builder.messages
+
+!ENTRY org.eclipse.osgi 2 1 2016-05-01 20:32:23.567
+!MESSAGE NLS unused message: DFDLXSDResourceBuilder_errorProjectReferenceIsMissing in: com.ibm.etools.msg.builder.messages
