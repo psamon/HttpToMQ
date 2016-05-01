@@ -31,11 +31,11 @@
 		<developerConnection>scm:git:${gitUrl}</developerConnection>
 	</scm>
 
-
 	<modules>
 		<module>HttpToMQ-Java</module>
+		<module>HttpToMQ-Lib</module>
+		<module>HttpToMQ-App</module>
 		<module>HttpToMQ-TestJava</module>
-		<module>HttpToMQ</module>
 	</modules>
 	<build>
 		<plugins>

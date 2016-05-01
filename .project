@@ -3,9 +3,6 @@
 	<name>HttpToMQ-Parent</name>
 	<comment></comment>
 	<projects>
-		<project>HttpToMQ</project>
-		<project>HttpToMQ-Java</project>
-		<project>HttpToMQ-TestJava</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

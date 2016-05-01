@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>HttpToMQ</name>
+	<name>HttpToMQ-App</name>
 	<comment></comment>
 	<projects>
-		<project>anz-iib-commons</project>
-		<project>HttpToMQ-Java</project>
-		<project>HttpToMQ-TestJava</project>
-		<project>HttpToMQJava</project>
+		<project>HttpToMQ-Lib</project>
+		<project>HttpToMQ-AppJava</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -3,16 +3,13 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	
-<parent>
-  <groupId>com.anz.api</groupId>
-  <artifactId>HttpToMQ-Parent</artifactId>
-  <version>0.0.0.1-SNAPSHOT</version>
-</parent>
+	<parent>
+  		<groupId>com.anz.api</groupId>
+  		<artifactId>HttpToMQ-Parent</artifactId>
+  		<version>0.0.0.1-SNAPSHOT</version>
+	</parent>
 
-
-	<groupId>com.anz</groupId>
 	<artifactId>HttpToMQ-Java</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
 		<dependency>
