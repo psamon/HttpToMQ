@@ -17,7 +17,7 @@ import com.ibm.broker.plugin.MbElement;
 import com.ibm.broker.plugin.MbMessageAssembly;
 
 /**
- * @author sanketsw
+ * @author sanketsw & psamon
  *
  */
 public class AddUserDefinedProperties extends CommonJavaCompute {

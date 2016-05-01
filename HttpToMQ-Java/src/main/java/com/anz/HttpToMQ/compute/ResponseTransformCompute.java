@@ -11,7 +11,7 @@ import com.anz.common.transform.ITransformer;
 import com.ibm.broker.plugin.MbMessageAssembly;
 
 /**
- * @author sanketsw
+ * @author sanketsw & psamon
  *
  */
 public class ResponseTransformCompute extends CommonBlobTransformCompute {

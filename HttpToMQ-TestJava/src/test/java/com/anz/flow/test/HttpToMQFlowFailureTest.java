@@ -6,6 +6,7 @@ package com.anz.flow.test;
 import static org.junit.Assert.assertEquals;
 
 
+
 import static org.junit.Assert.assertNotNull;
 
 import java.io.IOException;
@@ -25,8 +26,8 @@ import org.junit.Test;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
-import com.anz.MQToMQ.transform.pojo.NumbersInput;
-import com.anz.MQToMQ.transform.pojo.Result;
+import com.anz.HttpToMQ.transform.pojo.NumbersInput;
+import com.anz.HttpToMQ.transform.pojo.Result;
 import com.anz.common.dataaccess.models.iib.Operation;
 import com.anz.common.error.ExceptionMessage;
 import com.anz.common.test.FlowTest;
@@ -55,8 +56,8 @@ public class HttpToMQFlowFailureTest extends FlowTest {
 	private Gson gson = new Gson();
 	ObjectMapper objectMapper = new ObjectMapper();
 
-	private static final String TEST_FILE_001 = "MQToMQ.FailTest001.xml";
-	private static final String applicationName = "MQToMQ";
+	private static final String TEST_FILE_001 = "HttpToMQ.FailTest001.xml";
+	private static final String applicationName = "HttpToMQ-App";
 	private static final String flowName = "Main";
 	private static final String injectNodeName ="Read Request";
 	private static final String MESSAGE_FORMAT = "MessageFormat.xml";
